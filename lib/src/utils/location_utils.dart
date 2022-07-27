@@ -16,7 +16,7 @@ class LocationUtils {
           "X-Ios-Bundle-Identifier": packageInfo.packageName,
         };
       } else if (Platform.isAndroid) {
-        String sha1;
+        String? sha1;
         try {
           sha1 = await _platform.invokeMethod(
               'getSigningCertSha1', packageInfo.packageName);
